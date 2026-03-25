@@ -8,8 +8,8 @@ export default function App() {
   const [visible, setVisible] = useState({});
   const sectionRefs = useRef({});
 
-const N8N_WEBHOOK_URL = import.meta.env.VITE_N8N_WEBHOOK_URL;
-const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
+  const N8N_WEBHOOK_URL = import.meta.env.VITE_N8N_WEBHOOK_URL;
+  const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
 
   // Intersection observer for scroll reveals
   useEffect(() => {
@@ -386,6 +386,50 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
           color: var(--text-soft);
         }
 
+        .about-stats {
+          display: flex;
+          align-items: center;
+          margin-top: 32px;
+          padding: 28px 0;
+          border-top: 1px solid var(--parchment);
+          border-bottom: 1px solid var(--parchment);
+          gap: 0;
+        }
+        .about-stat {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 2px;
+        }
+        .about-stat-number {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 42px;
+          font-weight: 300;
+          color: var(--moss);
+          line-height: 1;
+        }
+        .about-stat-unit {
+          font-size: 11px;
+          font-weight: 500;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--fern);
+        }
+        .about-stat-label {
+          font-size: 11px;
+          font-weight: 300;
+          color: var(--text-soft);
+          letter-spacing: 0.05em;
+        }
+        .about-stat-divider {
+          width: 1px;
+          height: 52px;
+          background: var(--parchment);
+          flex-shrink: 0;
+        }
+
         /* ─── Offerings ─── */
         .offerings { padding: 80px 40px; }
         .section-header { margin-bottom: 64px; }
@@ -503,6 +547,12 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
         .contact-wrap {
           max-width: 760px;
           margin: 0 auto;
+          background: var(--white);
+          padding: 64px;
+          border: 1px solid var(--parchment);
+        }
+        @media (max-width: 768px) {
+          .contact-wrap { padding: 36px 24px; }
         }
         .contact-title {
           font-family: 'Cormorant Garamond', serif;
@@ -522,7 +572,7 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
         .form { display: flex; flex-direction: column; gap: 0; }
         .field {
           position: relative;
-          border-bottom: 1px solid var(--parchment);
+          border-bottom: 2px solid var(--parchment);
           padding: 24px 0 8px;
           transition: border-color 0.3s;
         }
@@ -532,10 +582,10 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
           top: 8px;
           left: 0;
           font-size: 10px;
-          font-weight: 500;
+          font-weight: 600;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: var(--ochre);
+          color: var(--moss);
         }
         .field input,
         .field textarea {
@@ -544,24 +594,24 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
           border: none;
           outline: none;
           font-family: 'Jost', sans-serif;
-          font-size: 16px;
-          font-weight: 300;
+          font-size: 17px;
+          font-weight: 400;
           color: var(--text);
           padding: 12px 0 4px;
           resize: none;
         }
         .field input::placeholder,
-        .field textarea::placeholder { color: var(--parchment); }
+        .field textarea::placeholder { color: #b0a890; }
 
         .interest-group {
           padding: 40px 0 20px;
         }
         .interest-label-header {
           font-size: 10px;
-          font-weight: 500;
+          font-weight: 600;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: var(--ochre);
+          color: var(--moss);
           margin-bottom: 20px;
           display: block;
         }
@@ -569,7 +619,7 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
           display: flex;
           flex-direction: column;
           gap: 0;
-          border: 1px solid var(--parchment);
+          border: 2px solid var(--parchment);
         }
         .interest-option {
           display: flex;
@@ -582,12 +632,12 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
           user-select: none;
         }
         .interest-option:last-child { border-bottom: none; }
-        .interest-option:hover { background: var(--parchment); }
+        .interest-option:hover { background: var(--cream); }
         .interest-option input[type="radio"] { display: none; }
         .radio-dot {
-          width: 18px;
-          height: 18px;
-          border: 1px solid var(--sage);
+          width: 20px;
+          height: 20px;
+          border: 2px solid var(--sage);
           border-radius: 50%;
           flex-shrink: 0;
           display: flex;
@@ -597,8 +647,8 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
         }
         .radio-dot::after {
           content: '';
-          width: 8px;
-          height: 8px;
+          width: 10px;
+          height: 10px;
           border-radius: 50%;
           background: var(--moss);
           opacity: 0;
@@ -606,10 +656,10 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
         }
         .interest-option.selected .radio-dot { border-color: var(--moss); }
         .interest-option.selected .radio-dot::after { opacity: 1; }
-        .interest-option.selected { background: var(--parchment); }
+        .interest-option.selected { background: var(--cream); }
         .interest-option-text {
           font-size: 15px;
-          font-weight: 300;
+          font-weight: 400;
           color: var(--text);
         }
         .interest-option-hint {
@@ -626,13 +676,13 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
           justify-content: center;
           gap: 14px;
           background: var(--moss);
-          color: var(--cream);
+          color: var(--white);
           border: none;
-          padding: 20px 48px;
+          padding: 22px 48px;
           font-family: 'Jost', sans-serif;
-          font-size: 12px;
-          font-weight: 500;
-          letter-spacing: 0.14em;
+          font-size: 13px;
+          font-weight: 600;
+          letter-spacing: 0.16em;
           text-transform: uppercase;
           cursor: pointer;
           transition: background 0.3s, gap 0.3s;
@@ -646,7 +696,7 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
           margin-top: 24px;
           padding: 16px 24px;
           font-size: 14px;
-          font-weight: 300;
+          font-weight: 400;
           text-align: center;
           border-left: 3px solid;
         }
@@ -752,11 +802,82 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
           ref={setRef("about-img")}
           className={`about-image-wrap reveal${visible["about-img"] ? " shown" : ""}`}
         >
-          <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnCOd7COyFjkOlJdaQdvceibIIIrE-bEWoFIKbeE4SYQ2rH3OnBcPOwNrONWpRK8nth16Ij1WfF7Qqh9xDyRq9PyG_b6Egbe3Yac6qTj7TTRCtr2k9RnYTv07KtYVllsx3hGifX0i9b7FEYDcpV1S_xCLBY2RtpvlMop8ZAffK1c3QfEYR5j-xb2NPOBGt9rJeLTNGGMBcdQKWc6xoUbaQUVE4BzM9oiUXWk2QK7gGIMK29MeVPkkG5s5vxQThsEK_xIDvUKe_Z40"
-            alt="Pedro Monteiro"
-            className="about-image"
-          />
+          <svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",display:"block"}}>
+
+
+            {/* Decorative circles */}
+            <circle cx="200" cy="200" r="140" fill="none" stroke="#8aab5c" strokeWidth="1" opacity="0.3"/>
+            <circle cx="200" cy="200" r="110" fill="none" stroke="#c4a84a" strokeWidth="0.5" opacity="0.25"/>
+
+            {/* Ground / mat */}
+            <ellipse cx="200" cy="390" rx="110" ry="14" fill="#c8e09a" opacity="0.5"/>
+            <ellipse cx="200" cy="390" rx="85" ry="9" fill="#8aab5c" opacity="0.25"/>
+
+            {/* Crossed legs */}
+            <path d="M145 360 Q160 380 200 382 Q240 380 255 360" fill="none" stroke="#3d5a1e" strokeWidth="3" strokeLinecap="round"/>
+            <path d="M148 362 Q155 375 178 378" fill="none" stroke="#3d5a1e" strokeWidth="8" strokeLinecap="round"/>
+            <path d="M252 362 Q245 375 222 378" fill="none" stroke="#3d5a1e" strokeWidth="8" strokeLinecap="round"/>
+            {/* Feet */}
+            <ellipse cx="175" cy="379" rx="14" ry="7" fill="#5a7a2a" opacity="0.7"/>
+            <ellipse cx="225" cy="379" rx="14" ry="7" fill="#5a7a2a" opacity="0.7"/>
+
+            {/* Body / torso */}
+            <path d="M175 270 Q165 310 162 345 Q180 360 200 361 Q220 360 238 345 Q235 310 225 270 Z" fill="#3d5a1e"/>
+
+            {/* Robe drape */}
+            <path d="M175 270 Q155 300 148 350 Q165 365 200 366 Q235 365 252 350 Q245 300 225 270 Z" fill="#5a7a2a" opacity="0.5"/>
+
+            {/* Neck */}
+            <rect x="192" y="248" width="16" height="26" rx="8" fill="#a08c3c" opacity="0.8"/>
+
+            {/* Head */}
+            <ellipse cx="200" cy="228" rx="34" ry="38" fill="#c4a84a" opacity="0.85"/>
+
+            {/* Hair / top of head */}
+            <ellipse cx="200" cy="200" rx="34" ry="18" fill="#3d5a1e" opacity="0.9"/>
+
+            {/* Face — closed eyes (meditating) */}
+            <path d="M187 228 Q192 232 197 228" fill="none" stroke="#3d5a1e" strokeWidth="1.5" strokeLinecap="round"/>
+            <path d="M203 228 Q208 232 213 228" fill="none" stroke="#3d5a1e" strokeWidth="1.5" strokeLinecap="round"/>
+            {/* Subtle smile */}
+            <path d="M192 240 Q200 246 208 240" fill="none" stroke="#3d5a1e" strokeWidth="1.2" strokeLinecap="round"/>
+
+            {/* Left arm resting on knee */}
+            <path d="M175 285 Q155 320 150 355" fill="none" stroke="#3d5a1e" strokeWidth="9" strokeLinecap="round"/>
+            {/* Left hand open, palm up */}
+            <ellipse cx="150" cy="358" rx="10" ry="6" fill="#5a7a2a" opacity="0.8" transform="rotate(-15 150 358)"/>
+
+            {/* Right arm resting on knee */}
+            <path d="M225 285 Q245 320 250 355" fill="none" stroke="#3d5a1e" strokeWidth="9" strokeLinecap="round"/>
+            {/* Right hand */}
+            <ellipse cx="250" cy="358" rx="10" ry="6" fill="#5a7a2a" opacity="0.8" transform="rotate(15 250 358)"/>
+
+            {/* Energy / aura dots floating */}
+            <circle cx="200" cy="152" r="4" fill="#c4a84a" opacity="0.7"/>
+            <circle cx="200" cy="138" r="2.5" fill="#c4a84a" opacity="0.5"/>
+            <circle cx="200" cy="128" r="1.5" fill="#c4a84a" opacity="0.3"/>
+
+            {/* Small floating particles */}
+            <circle cx="130" cy="210" r="3" fill="#8aab5c" opacity="0.4"/>
+            <circle cx="118" cy="195" r="2" fill="#8aab5c" opacity="0.3"/>
+            <circle cx="270" cy="210" r="3" fill="#8aab5c" opacity="0.4"/>
+            <circle cx="282" cy="195" r="2" fill="#8aab5c" opacity="0.3"/>
+
+            {/* Ground plants left */}
+            <path d="M100 390 Q90 370 80 355" fill="none" stroke="#8aab5c" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M100 390 Q85 375 88 358" fill="none" stroke="#8aab5c" strokeWidth="1.5" strokeLinecap="round"/>
+            <ellipse cx="80" cy="353" rx="10" ry="6" fill="#5a7a2a" opacity="0.5" transform="rotate(-20 80 353)"/>
+            <ellipse cx="87" cy="356" rx="9" ry="5" fill="#8aab5c" opacity="0.4" transform="rotate(10 87 356)"/>
+
+            {/* Ground plants right */}
+            <path d="M300 390 Q310 370 320 355" fill="none" stroke="#8aab5c" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M300 390 Q315 375 312 358" fill="none" stroke="#8aab5c" strokeWidth="1.5" strokeLinecap="round"/>
+            <ellipse cx="320" cy="353" rx="10" ry="6" fill="#5a7a2a" opacity="0.5" transform="rotate(20 320 353)"/>
+            <ellipse cx="313" cy="356" rx="9" ry="5" fill="#8aab5c" opacity="0.4" transform="rotate(-10 313 356)"/>
+
+            {/* Bottom text */}
+            <text x="200" y="470" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="13" fill="#3d5a1e" opacity="0.5" fontStyle="italic">presença · clareza · verdade</text>
+          </svg>
           <div className="about-image-frame" />
         </div>
         <div
@@ -786,6 +907,26 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
             <div>
               <span className="about-value-word">verdade</span>
               <span className="about-value-label">como caminho</span>
+            </div>
+          </div>
+
+          <div className="about-stats">
+            <div className="about-stat">
+              <span className="about-stat-number">+7</span>
+              <span className="about-stat-unit">anos</span>
+              <span className="about-stat-label">de atendimento</span>
+            </div>
+            <div className="about-stat-divider" />
+            <div className="about-stat">
+              <span className="about-stat-number">+200</span>
+              <span className="about-stat-unit">pessoas</span>
+              <span className="about-stat-label">atendidas</span>
+            </div>
+            <div className="about-stat-divider" />
+            <div className="about-stat">
+              <span className="about-stat-number">3</span>
+              <span className="about-stat-unit">práticas</span>
+              <span className="about-stat-label">integradas</span>
             </div>
           </div>
         </div>
@@ -908,17 +1049,6 @@ const TALLY_SESSION_URL = import.meta.env.VITE_TALLY_SESSION_URL;
                     </label>
                   ))}
                 </div>
-              </div>
-
-              <div className="field" style={{ borderBottom: "none", paddingBottom: 0 }}>
-                <label htmlFor="message" style={{ position: "relative", top: "auto", display: "block", marginBottom: 8 }}>Mensagem opcional</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  placeholder="Se quiser, escreva brevemente o que está vivendo hoje"
-                  style={{ paddingTop: 0 }}
-                />
               </div>
 
               <button type="submit" className="submit-btn" disabled={isSubmitting}>
