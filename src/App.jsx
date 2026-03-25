@@ -363,6 +363,7 @@ export default function App() {
           font-style: italic;
           color: var(--fern);
           display: block;
+          min-width: 80px;
         }
         .about-value-label {
           font-size: 10px;
@@ -385,6 +386,7 @@ export default function App() {
           align-items: center;
           text-align: center;
           gap: 2px;
+          padding: 0 8px;
         }
         .about-stat-number {
           font-family: 'Cormorant Garamond', serif;
@@ -524,7 +526,7 @@ export default function App() {
         }
 
         /* ─── Contact form ─── */
-        .contact-section { padding: clamp(60px, 8vw, 100px) var(--px); }
+        .contact-section { padding: clamp(60px, 8vw, 100px) var(--px) clamp(40px, 5vw, 60px); }
         .contact-wrap {
           max-width: 760px;
           margin: 0 auto;
@@ -712,6 +714,25 @@ export default function App() {
         .footer-glyphs { display: flex; gap: 18px; color: var(--sage); font-size: 16px; }
         @media (max-width: 480px) {
           footer { flex-direction: column; align-items: center; text-align: center; }
+        }
+
+        /* ─── Mobile fine-tuning ─── */
+        @media (max-width: 640px) {
+          header {
+            padding-left: var(--px);
+            padding-right: var(--px);
+          }
+          .about-values {
+            gap: 24px;
+          }
+          .about-value-word {
+            min-width: 70px;
+          }
+          .contact-wrap {
+            /* remove side border on very small screens for cleaner look */
+            border-left: none;
+            border-right: none;
+          }
         }
       `}</style>
 
