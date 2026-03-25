@@ -225,6 +225,13 @@ export default function App() {
           padding: clamp(48px, 8vw, 80px) var(--px) clamp(40px, 6vw, 60px);
           position: relative;
         }
+        @media (max-width: 640px) {
+          .hero {
+            min-height: unset;
+            padding-top: 32px;
+            padding-bottom: 48px;
+          }
+        }
         .hero-eyebrow {
           font-size: clamp(9px, 2.5vw, 11px);
           font-weight: 500;
@@ -316,15 +323,13 @@ export default function App() {
         @media (max-width: 768px) {
           .about { grid-template-columns: 1fr; }
         }
-        .about-image-wrap { position: relative; }
-        .about-image-frame {
-          position: absolute;
-          inset: -14px -14px 14px 14px;
-          border: 1px solid var(--sage);
-          pointer-events: none;
-          opacity: 0.4;
-          z-index: -1;
+        .about-image-wrap {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
+        .about-image-frame { display: none; }
         .about-tag {
           font-size: 10px;
           font-weight: 500;
@@ -766,7 +771,7 @@ export default function App() {
 
       <section className="about container">
         <div id="about-img" ref={setRef("about-img")} className={`about-image-wrap reveal${visible["about-img"] ? " shown" : ""}`}>
-          <svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",display:"block"}}>
+          <svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" style={{width:"100%", maxWidth:"340px", display:"block", margin:"0 auto"}}>
             <circle cx="200" cy="200" r="140" fill="none" stroke="#8aab5c" strokeWidth="1" opacity="0.3"/>
             <circle cx="200" cy="200" r="110" fill="none" stroke="#c4a84a" strokeWidth="0.5" opacity="0.25"/>
             <ellipse cx="200" cy="390" rx="110" ry="14" fill="#c8e09a" opacity="0.5"/>
