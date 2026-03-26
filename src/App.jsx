@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-
+import { SpeedInsights } from "@vercel/speed-insights/react";
 export default function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
@@ -933,6 +933,7 @@ export default function App() {
         <p className="footer-copy">© 2026 Pedro Monteiro · Todos os direitos reservados</p>
         <div className="footer-glyphs"><span>✦</span><span>◈</span><span>○</span></div>
       </footer>
+            <SpeedInsights />
     </div>
   );
 }
