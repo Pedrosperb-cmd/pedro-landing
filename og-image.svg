@@ -1,0 +1,46 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#f6f2e8"/>
+  <ellipse cx="-60" cy="160" rx="420" ry="380" fill="#8aab5c" opacity="0.12"/>
+  <ellipse cx="1160" cy="480" rx="340" ry="300" fill="#c4a84a" opacity="0.10"/>
+  <ellipse cx="500" cy="700" rx="380" ry="260" fill="#3d5a1e" opacity="0.08"/>
+  <circle cx="1080" cy="120" r="180" fill="none" stroke="#8aab5c" stroke-width="1" opacity="0.25"/>
+  <circle cx="1080" cy="120" r="140" fill="none" stroke="#c4a84a" stroke-width="0.5" opacity="0.20"/>
+  <circle cx="120" cy="560" r="120" fill="none" stroke="#8aab5c" stroke-width="1" opacity="0.20"/>
+  <line x1="80" y1="56" x2="1120" y2="56" stroke="#8aab5c" stroke-width="0.5" opacity="0.3"/>
+  <line x1="80" y1="574" x2="1120" y2="574" stroke="#8aab5c" stroke-width="0.5" opacity="0.3"/>
+  <text x="80" y="130" font-family="Georgia, serif" font-size="13" font-weight="500" fill="#a08c3c" letter-spacing="4" opacity="0.9">MENTOR ESPIRITUAL · LIMPEZA ESPIRITUAL · REIKI</text>
+  <text x="80" y="240" font-family="Georgia, serif" font-size="86" font-weight="300" fill="#3d5a1e" opacity="0.95">Quando a energia pesa,</text>
+  <text x="80" y="340" font-family="Georgia, serif" font-size="86" font-weight="300" font-style="italic" fill="#5a7a2a" opacity="0.95">a vida inteira sente.</text>
+  <line x1="80" y1="390" x2="300" y2="390" stroke="#8aab5c" stroke-width="1" opacity="0.4"/>
+  <text x="80" y="440" font-family="Georgia, sans-serif" font-size="20" font-weight="300" fill="#6b6350" opacity="0.85">Um espaço para reorganizar, clarear e devolver direção ao que perdeu força.</text>
+  <text x="80" y="552" font-family="Georgia, sans-serif" font-size="14" font-weight="400" fill="#8aab5c" letter-spacing="2" opacity="0.7">pedrosperbmonteiro.com.br</text>
+  <text x="1120" y="130" font-family="Georgia, serif" font-size="22" font-weight="400" font-style="italic" fill="#3d5a1e" text-anchor="end" opacity="0.8">Pedro Monteiro</text>
+  <circle cx="980" cy="360" r="160" fill="none" stroke="#8aab5c" stroke-width="1" opacity="0.2"/>
+  <circle cx="980" cy="360" r="125" fill="none" stroke="#c4a84a" stroke-width="0.5" opacity="0.15"/>
+  <ellipse cx="980" cy="510" rx="100" ry="12" fill="#c8e09a" opacity="0.4"/>
+  <ellipse cx="980" cy="510" rx="76" ry="8" fill="#8aab5c" opacity="0.2"/>
+  <path d="M930 490 Q946 505 980 507 Q1014 505 1030 490" fill="none" stroke="#3d5a1e" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M932 492 Q939 503 958 506" fill="none" stroke="#3d5a1e" stroke-width="7" stroke-linecap="round"/>
+  <path d="M1028 492 Q1021 503 1002 506" fill="none" stroke="#3d5a1e" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="956" cy="506" rx="12" ry="6" fill="#5a7a2a" opacity="0.65"/>
+  <ellipse cx="1004" cy="506" rx="12" ry="6" fill="#5a7a2a" opacity="0.65"/>
+  <path d="M958 380 Q950 415 948 460 Q963 472 980 473 Q997 472 1012 460 Q1010 415 1002 380 Z" fill="#3d5a1e"/>
+  <path d="M958 380 Q940 408 936 455 Q952 468 980 469 Q1008 468 1024 455 Q1020 408 1002 380 Z" fill="#5a7a2a" opacity="0.45"/>
+  <rect x="974" y="362" width="12" height="22" rx="6" fill="#a08c3c" opacity="0.8"/>
+  <ellipse cx="980" cy="347" rx="28" ry="32" fill="#c4a84a" opacity="0.85"/>
+  <ellipse cx="980" cy="324" rx="28" ry="15" fill="#3d5a1e" opacity="0.9"/>
+  <path d="M970 348 Q974 351 978 348" fill="none" stroke="#3d5a1e" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M982 348 Q986 351 990 348" fill="none" stroke="#3d5a1e" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M974 358 Q980 363 986 358" fill="none" stroke="#3d5a1e" stroke-width="1" stroke-linecap="round"/>
+  <path d="M958 392 Q942 422 938 453" fill="none" stroke="#3d5a1e" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="938" cy="456" rx="8" ry="5" fill="#5a7a2a" opacity="0.75" transform="rotate(-15 938 456)"/>
+  <path d="M1002 392 Q1018 422 1022 453" fill="none" stroke="#3d5a1e" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="1022" cy="456" rx="8" ry="5" fill="#5a7a2a" opacity="0.75" transform="rotate(15 1022 456)"/>
+  <circle cx="980" cy="280" r="3.5" fill="#c4a84a" opacity="0.65"/>
+  <circle cx="980" cy="268" r="2" fill="#c4a84a" opacity="0.45"/>
+  <circle cx="980" cy="260" r="1.2" fill="#c4a84a" opacity="0.28"/>
+  <circle cx="900" cy="350" r="2.5" fill="#8aab5c" opacity="0.35"/>
+  <circle cx="888" cy="338" r="1.5" fill="#8aab5c" opacity="0.25"/>
+  <circle cx="1060" cy="350" r="2.5" fill="#8aab5c" opacity="0.35"/>
+  <circle cx="1072" cy="338" r="1.5" fill="#8aab5c" opacity="0.25"/>
+</svg>
