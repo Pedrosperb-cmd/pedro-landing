@@ -920,7 +920,7 @@ const testimonials = [
                   {[
                     { value: "newsletter", label: "Receber a newsletter", hint: "gratuito" },
                     { value: "community", label: "Entrar na comunidade", hint: "gratuito" },
-                    { value: "session", label: "Aplicar para sessão online", hint: "via Tally" },
+                    { value: "session", label: "Aplicar para sessão", hint: "via Tally" },
                   ].map((opt) => (
                     <label key={opt.value} className={`interest-option${interest === opt.value ? " selected" : ""}`} onClick={() => setInterest(opt.value)}>
                       <input type="radio" name="interest" value={opt.value} onChange={() => setInterest(opt.value)} checked={interest === opt.value} readOnly />
