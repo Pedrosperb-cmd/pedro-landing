@@ -35,7 +35,7 @@ export default function App() {
   const offerings = [
     {
       glyph: "✦",
-      title: "Mentoria espiritual",
+      title: "Guia espiritual",
       description: "Encontros individuais para trazer clareza, direção e presença. Um espaço para olhar a vida com mais verdade, entender padrões e reorganizar o que está desalinhado.",
     },
     {
