@@ -50,21 +50,33 @@ export default function App() {
     },
   ];
 
-  const testimonials = [
+const testimonials = [
     {
-      quote: "Encontrei no trabalho do Pedro algo raro: profundidade sem exagero. Saí mais leve, mais presente e com uma direção muito mais clara.",
-      author: "Mariana L.",
+      quote: "Cheguei sem saber bem o que esperar e saí com uma clareza que não tinha há anos. O Pedro tem uma presença que acalma e ao mesmo tempo move.",
+      author: "Camila R.",
     },
     {
-      quote: "A limpeza espiritual marcou um antes e um depois. Eu já sabia que estava pesada, mas não imaginava o quanto isso estava afetando minha vida.",
-      author: "Roberto K.",
+      quote: "Fiz a limpeza espiritual num momento muito difícil. Foi como tirar um peso que eu nem sabia que estava carregando. Recomendo de olhos fechados.",
+      author: "Marcos T.",
     },
     {
-      quote: "O Reiki trouxe uma paz muito concreta para o meu corpo e para a minha mente. Não foi só uma sensação boa, foi reorganização real.",
-      author: "Clarice M.",
+      quote: "O reiki com o Pedro é diferente de tudo que já experimentei. Saí renovada, com o corpo leve e a mente mais quieta. Uma experiência transformadora.",
+      author: "Beatriz S.",
+    },
+    {
+      quote: "Eu estava tentando resolver tudo pela cabeça e não chegava a lugar nenhum. A mentoria me mostrou onde eu estava me sabotando sem perceber.",
+      author: "Lucas F.",
+    },
+    {
+      quote: "Não foi sobre me sentir melhor por um dia. Foi sobre entender o que estava acontecendo de verdade e conseguir agir de forma diferente depois.",
+      author: "Patrícia M.",
+    },
+    {
+      quote: "A energia estava completamente travada. Depois da sessão algo se reorganizou por dentro — uma leveza e uma direção que eu não conseguia encontrar sozinha.",
+      author: "Rafael N.",
     },
   ];
-
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
     setStatusMessage("");
