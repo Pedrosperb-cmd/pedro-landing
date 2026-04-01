@@ -764,7 +764,7 @@ const testimonials = [
 
       <section className="hero container">
         <p id="hero-eye" ref={setRef("hero-eye")} className={`hero-eyebrow reveal${visible["hero-eye"] ? " shown" : ""}`}>
-          Mentor espiritual · Limpeza espiritual · Reiki
+          Guia espiritual · Limpeza espiritual · Reiki
         </p>
         <h2 id="hero-title" ref={setRef("hero-title")} className={`hero-title reveal reveal-delay-1${visible["hero-title"] ? " shown" : ""}`}>
           Quando a energia pesa,<br />
@@ -827,7 +827,7 @@ const testimonials = [
         <div id="about-text" ref={setRef("about-text")} className={`reveal reveal-delay-1${visible["about-text"] ? " shown" : ""}`}>
           <p className="about-tag">Quem é Pedro Monteiro</p>
           <h3 className="about-title">Um olhar que<br />acompanha sem julgar.</h3>
-          <p className="about-text">Pedro Monteiro é mentor espiritual e conduz trabalhos de limpeza energética, reiki e acompanhamento individual. Sua proposta une sensibilidade, presença e profundidade para ajudar pessoas que sentem necessidade de se reorganizar por dentro.</p>
+          <p className="about-text">Pedro Monteiro é guia espiritual e conduz trabalhos de limpeza energética, reiki e acompanhamento individual. Sua proposta une sensibilidade, presença e profundidade para ajudar pessoas que sentem necessidade de se reorganizar por dentro.</p>
           <p className="about-text">Cada encontro é construído a partir do que a pessoa carrega — sem fórmulas prontas, sem respostas impostas. Apenas espaço, escuta e movimento real.</p>
           <div className="about-values">
             <div><span className="about-value-word">presença</span><span className="about-value-label">como base</span></div>
