@@ -50,7 +50,7 @@ export default function App() {
     },
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       quote: "Cheguei sem saber bem o que esperar e saí com uma clareza que não tinha há anos. O Pedro tem uma presença que acalma e ao mesmo tempo move.",
       author: "Camila R.",
@@ -76,7 +76,7 @@ const testimonials = [
       author: "Rafael N.",
     },
   ];
-  
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setStatusMessage("");
@@ -156,7 +156,6 @@ const testimonials = [
           overflow-x: hidden;
         }
 
-        /* ─── Noise texture ─── */
         body::before {
           content: '';
           position: fixed;
@@ -167,7 +166,6 @@ const testimonials = [
           z-index: 9999;
         }
 
-        /* ─── Ambient blobs — smaller on mobile ─── */
         .blob {
           position: fixed;
           border-radius: 50%;
@@ -180,7 +178,6 @@ const testimonials = [
         .blob-2 { width: min(400px, 70vw); height: min(400px, 70vw); background: var(--gold); top: 40%; right: -100px; }
         .blob-3 { width: min(300px, 60vw); height: min(300px, 60vw); background: var(--moss); bottom: 10%; left: 15%; }
 
-        /* ─── Layout ─── */
         .container {
           max-width: 1100px;
           margin: 0 auto;
@@ -189,14 +186,12 @@ const testimonials = [
           z-index: 1;
         }
 
-        /* ─── Scroll reveal ─── */
         .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.8s ease, transform 0.8s ease; }
         .reveal.shown { opacity: 1; transform: translateY(0); }
         .reveal-delay-1 { transition-delay: 0.1s; }
         .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.32s; }
 
-        /* ─── Header ─── */
         header {
           padding: clamp(20px, 4vw, 36px) var(--px);
           display: flex;
@@ -228,7 +223,6 @@ const testimonials = [
         }
         .nav-cta:hover { color: var(--fern); border-color: var(--fern); }
 
-        /* ─── Hero ─── */
         .hero {
           min-height: 85svh;
           display: flex;
@@ -238,11 +232,7 @@ const testimonials = [
           position: relative;
         }
         @media (max-width: 640px) {
-          .hero {
-            min-height: unset;
-            padding-top: 32px;
-            padding-bottom: 48px;
-          }
+          .hero { min-height: unset; padding-top: 32px; padding-bottom: 48px; }
         }
         .hero-eyebrow {
           font-size: clamp(9px, 2.5vw, 11px);
@@ -284,7 +274,6 @@ const testimonials = [
           text-transform: uppercase;
           transition: background 0.3s, gap 0.3s;
           width: fit-content;
-          /* Bigger tap target on mobile */
           min-height: 52px;
         }
         .hero-cta:hover { background: var(--fern); gap: 20px; }
@@ -308,11 +297,8 @@ const testimonials = [
           border-radius: 50%;
           opacity: 0.5;
         }
-        @media (max-width: 640px) {
-          .hero-ornament { display: none; }
-        }
+        @media (max-width: 640px) { .hero-ornament { display: none; } }
 
-        /* ─── Divider ─── */
         .divider {
           display: flex;
           align-items: center;
@@ -324,7 +310,6 @@ const testimonials = [
         .divider-line { flex: 1; height: 1px; background: var(--sage); }
         .divider-glyph { font-size: 13px; color: var(--ochre); }
 
-        /* ─── About ─── */
         .about {
           padding: clamp(60px, 8vw, 100px) var(--px);
           display: grid;
@@ -332,9 +317,7 @@ const testimonials = [
           gap: clamp(40px, 6vw, 80px);
           align-items: center;
         }
-        @media (max-width: 768px) {
-          .about { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 768px) { .about { grid-template-columns: 1fr; } }
         .about-image-wrap {
           position: relative;
           display: flex;
@@ -369,9 +352,11 @@ const testimonials = [
         .about-values {
           display: flex;
           gap: clamp(16px, 4vw, 32px);
-          margin-top: 32px;
-          padding-top: 28px;
+          margin-top: 24px;
+          margin-bottom: 24px;
+          padding: 24px 0;
           border-top: 1px solid var(--parchment);
+          border-bottom: 1px solid var(--parchment);
           flex-wrap: wrap;
         }
         .about-value-word {
@@ -431,7 +416,6 @@ const testimonials = [
           flex-shrink: 0;
         }
 
-        /* ─── Offerings ─── */
         .offerings { padding: clamp(48px, 7vw, 80px) var(--px); }
         .section-header { margin-bottom: clamp(40px, 6vw, 64px); }
         .section-tag {
@@ -456,9 +440,7 @@ const testimonials = [
           background: var(--parchment);
           border: 1px solid var(--parchment);
         }
-        @media (max-width: 768px) {
-          .offering-list { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 768px) { .offering-list { grid-template-columns: 1fr; } }
         .offering-item {
           background: var(--white);
           padding: clamp(28px, 5vw, 52px) clamp(20px, 4vw, 40px);
@@ -486,7 +468,6 @@ const testimonials = [
           color: var(--text-soft);
         }
 
-        /* ─── Testimonials ─── */
         .testimonials {
           padding: clamp(60px, 8vw, 100px) var(--px);
           background: var(--moss);
@@ -513,9 +494,7 @@ const testimonials = [
           background: rgba(255,255,255,0.1);
           margin-top: clamp(36px, 5vw, 56px);
         }
-        @media (max-width: 768px) {
-          .testimonial-grid { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 768px) { .testimonial-grid { grid-template-columns: 1fr; } }
         .testimonial-item {
           background: rgba(255,255,255,0.04);
           padding: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 36px);
@@ -542,7 +521,6 @@ const testimonials = [
           color: var(--sage);
         }
 
-        /* ─── Contact form ─── */
         .contact-section { padding: clamp(60px, 8vw, 100px) var(--px) clamp(40px, 5vw, 60px); }
         .contact-wrap {
           max-width: 760px;
@@ -590,11 +568,9 @@ const testimonials = [
           border: none;
           outline: none;
           font-family: 'Jost', sans-serif;
-          font-size: 16px;
           font-weight: 400;
           color: var(--text);
           padding: 12px 0 4px;
-          /* prevent iOS zoom on focus */
           font-size: max(16px, 1em);
         }
         .field input::placeholder { color: #b0a890; }
@@ -623,7 +599,6 @@ const testimonials = [
           border-bottom: 1px solid var(--parchment);
           transition: background 0.25s;
           user-select: none;
-          /* Good tap target */
           min-height: 52px;
         }
         .interest-option:last-child { border-bottom: none; }
@@ -664,9 +639,7 @@ const testimonials = [
           font-style: italic;
           white-space: nowrap;
         }
-        @media (max-width: 480px) {
-          .interest-option-hint { display: none; }
-        }
+        @media (max-width: 480px) { .interest-option-hint { display: none; } }
 
         .submit-btn {
           margin-top: clamp(32px, 5vw, 48px);
@@ -704,7 +677,6 @@ const testimonials = [
         .status-msg.success { background: rgba(90,122,42,0.08); border-color: var(--fern); color: var(--fern); }
         .status-msg.error { background: rgba(180,60,40,0.08); border-color: #b43c28; color: #8a2e1c; }
 
-        /* ─── Footer ─── */
         footer {
           padding: clamp(36px, 5vw, 60px) var(--px);
           border-top: 1px solid var(--parchment);
@@ -729,27 +701,13 @@ const testimonials = [
           text-align: center;
         }
         .footer-glyphs { display: flex; gap: 18px; color: var(--sage); font-size: 16px; }
-        @media (max-width: 480px) {
-          footer { flex-direction: column; align-items: center; text-align: center; }
-        }
+        @media (max-width: 480px) { footer { flex-direction: column; align-items: center; text-align: center; } }
 
-        /* ─── Mobile fine-tuning ─── */
         @media (max-width: 640px) {
-          header {
-            padding-left: var(--px);
-            padding-right: var(--px);
-          }
-          .about-values {
-            gap: 24px;
-          }
-          .about-value-word {
-            min-width: 70px;
-          }
-          .contact-wrap {
-            /* remove side border on very small screens for cleaner look */
-            border-left: none;
-            border-right: none;
-          }
+          header { padding-left: var(--px); padding-right: var(--px); }
+          .about-values { gap: 24px; }
+          .about-value-word { min-width: 70px; }
+          .contact-wrap { border-left: none; border-right: none; }
         }
       `}</style>
 
@@ -783,123 +741,119 @@ const testimonials = [
 
       <section className="about container">
         <div id="about-img" ref={setRef("about-img")} className={`about-image-wrap reveal${visible["about-img"] ? " shown" : ""}`}>
-<svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" style={{width:"100%", maxWidth:"340px", display:"block", margin:"0 auto"}}>
-  <style>{`
-    @keyframes breathe {
-      0%, 100% { transform: translateY(0px) scaleX(1); }
-      50% { transform: translateY(-6px) scaleX(0.98); }
-    }
-    @keyframes float1 {
-      0%, 100% { transform: translate(0px, 0px); opacity: 0.4; }
-      33% { transform: translate(-6px, -8px); opacity: 0.7; }
-      66% { transform: translate(4px, -5px); opacity: 0.3; }
-    }
-    @keyframes float2 {
-      0%, 100% { transform: translate(0px, 0px); opacity: 0.3; }
-      33% { transform: translate(5px, -10px); opacity: 0.6; }
-      66% { transform: translate(-3px, -6px); opacity: 0.2; }
-    }
-    @keyframes float3 {
-      0%, 100% { transform: translate(0px, 0px); opacity: 0.4; }
-      50% { transform: translate(6px, -7px); opacity: 0.7; }
-    }
-    @keyframes float4 {
-      0%, 100% { transform: translate(0px, 0px); opacity: 0.3; }
-      50% { transform: translate(-5px, -9px); opacity: 0.6; }
-    }
-    @keyframes sway-left {
-      0%, 100% { transform-origin: 100px 390px; transform: rotate(0deg); }
-      30% { transform-origin: 100px 390px; transform: rotate(-8deg); }
-      60% { transform-origin: 100px 390px; transform: rotate(5deg); }
-    }
-    @keyframes sway-right {
-      0%, 100% { transform-origin: 300px 390px; transform: rotate(0deg); }
-      30% { transform-origin: 300px 390px; transform: rotate(8deg); }
-      60% { transform-origin: 300px 390px; transform: rotate(-5deg); }
-    }
-    @keyframes aura-pulse {
-      0%, 100% { opacity: 0.7; transform: translateY(0px); }
-      50% { opacity: 1; transform: translateY(-4px); }
-    }
-    @keyframes aura-pulse2 {
-      0%, 100% { opacity: 0.5; transform: translateY(0px); }
-      50% { opacity: 0.8; transform: translateY(-6px); }
-    }
-    @keyframes aura-pulse3 {
-      0%, 100% { opacity: 0.3; transform: translateY(0px); }
-      50% { opacity: 0.6; transform: translateY(-8px); }
-    }
-    .figure { animation: breathe 5s ease-in-out infinite; transform-origin: 200px 480px; }
-    .p1 { animation: float1 4s ease-in-out infinite; }
-    .p2 { animation: float2 5s ease-in-out infinite 0.5s; }
-    .p3 { animation: float3 4.5s ease-in-out infinite 1s; }
-    .p4 { animation: float4 3.8s ease-in-out infinite 0.3s; }
-    .plant-left { animation: sway-left 4s ease-in-out infinite; }
-    .plant-right { animation: sway-right 4s ease-in-out infinite 0.8s; }
-    .aura1 { animation: aura-pulse 3s ease-in-out infinite; }
-    .aura2 { animation: aura-pulse2 3s ease-in-out infinite 0.5s; }
-    .aura3 { animation: aura-pulse3 3s ease-in-out infinite 1s; }
-  `}</style>
-  <circle cx="200" cy="200" r="140" fill="none" stroke="#8aab5c" strokeWidth="1" opacity="0.3"/>
-  <circle cx="200" cy="200" r="110" fill="none" stroke="#c4a84a" strokeWidth="0.5" opacity="0.25"/>
-  <g className="plant-left">
-    <path d="M100 390 Q90 370 80 355" fill="none" stroke="#8aab5c" strokeWidth="2" strokeLinecap="round"/>
-    <path d="M100 390 Q85 375 88 358" fill="none" stroke="#8aab5c" strokeWidth="1.5" strokeLinecap="round"/>
-    <ellipse cx="80" cy="353" rx="10" ry="6" fill="#5a7a2a" opacity="0.5" transform="rotate(-20 80 353)"/>
-    <ellipse cx="87" cy="356" rx="9" ry="5" fill="#8aab5c" opacity="0.4" transform="rotate(10 87 356)"/>
-  </g>
-  <g className="plant-right">
-    <path d="M300 390 Q310 370 320 355" fill="none" stroke="#8aab5c" strokeWidth="2" strokeLinecap="round"/>
-    <path d="M300 390 Q315 375 312 358" fill="none" stroke="#8aab5c" strokeWidth="1.5" strokeLinecap="round"/>
-    <ellipse cx="320" cy="353" rx="10" ry="6" fill="#5a7a2a" opacity="0.5" transform="rotate(20 320 353)"/>
-    <ellipse cx="313" cy="356" rx="9" ry="5" fill="#8aab5c" opacity="0.4" transform="rotate(-10 313 356)"/>
-  </g>
-  <g className="p1"><circle cx="130" cy="210" r="3.5" fill="#8aab5c"/></g>
-  <g className="p2"><circle cx="118" cy="195" r="2.5" fill="#8aab5c"/></g>
-  <g className="p3"><circle cx="270" cy="210" r="3.5" fill="#8aab5c"/></g>
-  <g className="p4"><circle cx="282" cy="195" r="2.5" fill="#8aab5c"/></g>
-  <g className="figure">
-    <ellipse cx="200" cy="390" rx="110" ry="14" fill="#c8e09a" opacity="0.5"/>
-    <ellipse cx="200" cy="390" rx="85" ry="9" fill="#8aab5c" opacity="0.25"/>
-    <path d="M145 360 Q160 380 200 382 Q240 380 255 360" fill="none" stroke="#3d5a1e" strokeWidth="3" strokeLinecap="round"/>
-    <path d="M148 362 Q155 375 178 378" fill="none" stroke="#3d5a1e" strokeWidth="8" strokeLinecap="round"/>
-    <path d="M252 362 Q245 375 222 378" fill="none" stroke="#3d5a1e" strokeWidth="8" strokeLinecap="round"/>
-    <ellipse cx="175" cy="379" rx="14" ry="7" fill="#5a7a2a" opacity="0.7"/>
-    <ellipse cx="225" cy="379" rx="14" ry="7" fill="#5a7a2a" opacity="0.7"/>
-    <path d="M175 270 Q165 310 162 345 Q180 360 200 361 Q220 360 238 345 Q235 310 225 270 Z" fill="#3d5a1e"/>
-    <path d="M175 270 Q155 300 148 350 Q165 365 200 366 Q235 365 252 350 Q245 300 225 270 Z" fill="#5a7a2a" opacity="0.5"/>
-    <rect x="192" y="248" width="16" height="26" rx="8" fill="#a08c3c" opacity="0.8"/>
-    <ellipse cx="200" cy="228" rx="34" ry="38" fill="#c4a84a" opacity="0.85"/>
-    <ellipse cx="200" cy="200" rx="34" ry="18" fill="#3d5a1e" opacity="0.9"/>
-    <path d="M187 228 Q192 232 197 228" fill="none" stroke="#3d5a1e" strokeWidth="1.5" strokeLinecap="round"/>
-    <path d="M203 228 Q208 232 213 228" fill="none" stroke="#3d5a1e" strokeWidth="1.5" strokeLinecap="round"/>
-    <path d="M192 240 Q200 246 208 240" fill="none" stroke="#3d5a1e" strokeWidth="1.2" strokeLinecap="round"/>
-    <path d="M175 285 Q155 320 150 355" fill="none" stroke="#3d5a1e" strokeWidth="9" strokeLinecap="round"/>
-    <ellipse cx="150" cy="358" rx="10" ry="6" fill="#5a7a2a" opacity="0.8" transform="rotate(-15 150 358)"/>
-    <path d="M225 285 Q245 320 250 355" fill="none" stroke="#3d5a1e" strokeWidth="9" strokeLinecap="round"/>
-    <ellipse cx="250" cy="358" rx="10" ry="6" fill="#5a7a2a" opacity="0.8" transform="rotate(15 250 358)"/>
-    <g className="aura1"><circle cx="200" cy="152" r="4" fill="#c4a84a"/></g>
-    <g className="aura2"><circle cx="200" cy="138" r="2.5" fill="#c4a84a"/></g>
-    <g className="aura3"><circle cx="200" cy="128" r="1.5" fill="#c4a84a"/></g>
-<text x="200" y="472" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="22" fill="#3d5a1e" opacity="0.85" fontStyle="italic">presença · clareza · verdade</text>  </g>
-</svg>
+          <svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" style={{width:"100%", maxWidth:"340px", display:"block", margin:"0 auto"}}>
+            <style>{`
+              @keyframes breathe {
+                0%, 100% { transform: translateY(0px) scaleX(1); }
+                50% { transform: translateY(-6px) scaleX(0.98); }
+              }
+              @keyframes float1 {
+                0%, 100% { transform: translate(0px, 0px); opacity: 0.4; }
+                33% { transform: translate(-6px, -8px); opacity: 0.7; }
+                66% { transform: translate(4px, -5px); opacity: 0.3; }
+              }
+              @keyframes float2 {
+                0%, 100% { transform: translate(0px, 0px); opacity: 0.3; }
+                33% { transform: translate(5px, -10px); opacity: 0.6; }
+                66% { transform: translate(-3px, -6px); opacity: 0.2; }
+              }
+              @keyframes float3 {
+                0%, 100% { transform: translate(0px, 0px); opacity: 0.4; }
+                50% { transform: translate(6px, -7px); opacity: 0.7; }
+              }
+              @keyframes float4 {
+                0%, 100% { transform: translate(0px, 0px); opacity: 0.3; }
+                50% { transform: translate(-5px, -9px); opacity: 0.6; }
+              }
+              @keyframes sway-left {
+                0%, 100% { transform-origin: 100px 390px; transform: rotate(0deg); }
+                30% { transform-origin: 100px 390px; transform: rotate(-8deg); }
+                60% { transform-origin: 100px 390px; transform: rotate(5deg); }
+              }
+              @keyframes sway-right {
+                0%, 100% { transform-origin: 300px 390px; transform: rotate(0deg); }
+                30% { transform-origin: 300px 390px; transform: rotate(8deg); }
+                60% { transform-origin: 300px 390px; transform: rotate(-5deg); }
+              }
+              @keyframes aura-pulse {
+                0%, 100% { opacity: 0.7; transform: translateY(0px); }
+                50% { opacity: 1; transform: translateY(-4px); }
+              }
+              @keyframes aura-pulse2 {
+                0%, 100% { opacity: 0.5; transform: translateY(0px); }
+                50% { opacity: 0.8; transform: translateY(-6px); }
+              }
+              @keyframes aura-pulse3 {
+                0%, 100% { opacity: 0.3; transform: translateY(0px); }
+                50% { opacity: 0.6; transform: translateY(-8px); }
+              }
+              .figure { animation: breathe 5s ease-in-out infinite; transform-origin: 200px 480px; }
+              .p1 { animation: float1 4s ease-in-out infinite; }
+              .p2 { animation: float2 5s ease-in-out infinite 0.5s; }
+              .p3 { animation: float3 4.5s ease-in-out infinite 1s; }
+              .p4 { animation: float4 3.8s ease-in-out infinite 0.3s; }
+              .plant-left { animation: sway-left 4s ease-in-out infinite; }
+              .plant-right { animation: sway-right 4s ease-in-out infinite 0.8s; }
+              .aura1 { animation: aura-pulse 3s ease-in-out infinite; }
+              .aura2 { animation: aura-pulse2 3s ease-in-out infinite 0.5s; }
+              .aura3 { animation: aura-pulse3 3s ease-in-out infinite 1s; }
+            `}</style>
+            <circle cx="200" cy="200" r="140" fill="none" stroke="#8aab5c" strokeWidth="1" opacity="0.3"/>
+            <circle cx="200" cy="200" r="110" fill="none" stroke="#c4a84a" strokeWidth="0.5" opacity="0.25"/>
+            <g className="plant-left">
+              <path d="M100 390 Q90 370 80 355" fill="none" stroke="#8aab5c" strokeWidth="2" strokeLinecap="round"/>
+              <path d="M100 390 Q85 375 88 358" fill="none" stroke="#8aab5c" strokeWidth="1.5" strokeLinecap="round"/>
+              <ellipse cx="80" cy="353" rx="10" ry="6" fill="#5a7a2a" opacity="0.5" transform="rotate(-20 80 353)"/>
+              <ellipse cx="87" cy="356" rx="9" ry="5" fill="#8aab5c" opacity="0.4" transform="rotate(10 87 356)"/>
+            </g>
+            <g className="plant-right">
+              <path d="M300 390 Q310 370 320 355" fill="none" stroke="#8aab5c" strokeWidth="2" strokeLinecap="round"/>
+              <path d="M300 390 Q315 375 312 358" fill="none" stroke="#8aab5c" strokeWidth="1.5" strokeLinecap="round"/>
+              <ellipse cx="320" cy="353" rx="10" ry="6" fill="#5a7a2a" opacity="0.5" transform="rotate(20 320 353)"/>
+              <ellipse cx="313" cy="356" rx="9" ry="5" fill="#8aab5c" opacity="0.4" transform="rotate(-10 313 356)"/>
+            </g>
+            <g className="p1"><circle cx="130" cy="210" r="3.5" fill="#8aab5c"/></g>
+            <g className="p2"><circle cx="118" cy="195" r="2.5" fill="#8aab5c"/></g>
+            <g className="p3"><circle cx="270" cy="210" r="3.5" fill="#8aab5c"/></g>
+            <g className="p4"><circle cx="282" cy="195" r="2.5" fill="#8aab5c"/></g>
+            <g className="figure">
+              <ellipse cx="200" cy="390" rx="110" ry="14" fill="#c8e09a" opacity="0.5"/>
+              <ellipse cx="200" cy="390" rx="85" ry="9" fill="#8aab5c" opacity="0.25"/>
+              <path d="M145 360 Q160 380 200 382 Q240 380 255 360" fill="none" stroke="#3d5a1e" strokeWidth="3" strokeLinecap="round"/>
+              <path d="M148 362 Q155 375 178 378" fill="none" stroke="#3d5a1e" strokeWidth="8" strokeLinecap="round"/>
+              <path d="M252 362 Q245 375 222 378" fill="none" stroke="#3d5a1e" strokeWidth="8" strokeLinecap="round"/>
+              <ellipse cx="175" cy="379" rx="14" ry="7" fill="#5a7a2a" opacity="0.7"/>
+              <ellipse cx="225" cy="379" rx="14" ry="7" fill="#5a7a2a" opacity="0.7"/>
+              <path d="M175 270 Q165 310 162 345 Q180 360 200 361 Q220 360 238 345 Q235 310 225 270 Z" fill="#3d5a1e"/>
+              <path d="M175 270 Q155 300 148 350 Q165 365 200 366 Q235 365 252 350 Q245 300 225 270 Z" fill="#5a7a2a" opacity="0.5"/>
+              <rect x="192" y="248" width="16" height="26" rx="8" fill="#a08c3c" opacity="0.8"/>
+              <ellipse cx="200" cy="228" rx="34" ry="38" fill="#c4a84a" opacity="0.85"/>
+              <ellipse cx="200" cy="200" rx="34" ry="18" fill="#3d5a1e" opacity="0.9"/>
+              <path d="M187 228 Q192 232 197 228" fill="none" stroke="#3d5a1e" strokeWidth="1.5" strokeLinecap="round"/>
+              <path d="M203 228 Q208 232 213 228" fill="none" stroke="#3d5a1e" strokeWidth="1.5" strokeLinecap="round"/>
+              <path d="M192 240 Q200 246 208 240" fill="none" stroke="#3d5a1e" strokeWidth="1.2" strokeLinecap="round"/>
+              <path d="M175 285 Q155 320 150 355" fill="none" stroke="#3d5a1e" strokeWidth="9" strokeLinecap="round"/>
+              <ellipse cx="150" cy="358" rx="10" ry="6" fill="#5a7a2a" opacity="0.8" transform="rotate(-15 150 358)"/>
+              <path d="M225 285 Q245 320 250 355" fill="none" stroke="#3d5a1e" strokeWidth="9" strokeLinecap="round"/>
+              <ellipse cx="250" cy="358" rx="10" ry="6" fill="#5a7a2a" opacity="0.8" transform="rotate(15 250 358)"/>
+              <g className="aura1"><circle cx="200" cy="152" r="4" fill="#c4a84a"/></g>
+              <g className="aura2"><circle cx="200" cy="138" r="2.5" fill="#c4a84a"/></g>
+              <g className="aura3"><circle cx="200" cy="128" r="1.5" fill="#c4a84a"/></g>
+              <text x="200" y="472" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="22" fill="#3d5a1e" opacity="0.85" fontStyle="italic">presença · clareza · verdade</text>
+            </g>
+          </svg>
           <div className="about-image-frame" />
         </div>
         <div id="about-text" ref={setRef("about-text")} className={`reveal reveal-delay-1${visible["about-text"] ? " shown" : ""}`}>
           <p className="about-tag">Quem é Pedro Monteiro</p>
           <h3 className="about-title">Um olhar que<br />acompanha sem julgar.</h3>
-<p className="about-text">Pedro Monteiro é mentor espiritual e conduz trabalhos de limpeza energética, reiki e acompanhamento individual. Sua proposta une sensibilidade, presença e profundidade para ajudar pessoas que sentem necessidade de se reorganizar por dentro.</p>
-<div className="about-values">
-  <div><span className="about-value-word">presença</span><span className="about-value-label">como base</span></div>
-  <div><span className="about-value-word">clareza</span><span className="about-value-label">como direção</span></div>
-  <div><span className="about-value-word">verdade</span><span className="about-value-label">como caminho</span></div>
-</div>
-<p className="about-text">Cada encontro é construído a partir do que a pessoa carrega — sem fórmulas prontas, sem respostas impostas. Apenas espaço, escuta e movimento real.</p>
-<div className="about-stats">
+          <p className="about-text">Pedro Monteiro é guia espiritual e conduz trabalhos de limpeza energética, reiki e acompanhamento individual. Sua proposta une sensibilidade, presença e profundidade para ajudar pessoas que sentem necessidade de se reorganizar por dentro.</p>
+          <div className="about-values">
             <div><span className="about-value-word">presença</span><span className="about-value-label">como base</span></div>
             <div><span className="about-value-word">clareza</span><span className="about-value-label">como direção</span></div>
             <div><span className="about-value-word">verdade</span><span className="about-value-label">como caminho</span></div>
           </div>
+          <p className="about-text">Cada encontro é construído a partir do que a pessoa carrega — sem fórmulas prontas, sem respostas impostas. Apenas espaço, escuta e movimento real.</p>
           <div className="about-stats">
             <div className="about-stat">
               <span className="about-stat-number">+7</span>
@@ -1011,7 +965,7 @@ const testimonials = [
         <p className="footer-copy">© 2026 Pedro Monteiro · Todos os direitos reservados</p>
         <div className="footer-glyphs"><span>✦</span><span>◈</span><span>○</span></div>
       </footer>
-            <SpeedInsights />
+      <SpeedInsights />
     </div>
   );
 }
