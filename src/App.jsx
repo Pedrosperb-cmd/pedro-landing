@@ -881,8 +881,7 @@ const testimonials = [
     <g className="aura1"><circle cx="200" cy="152" r="4" fill="#c4a84a"/></g>
     <g className="aura2"><circle cx="200" cy="138" r="2.5" fill="#c4a84a"/></g>
     <g className="aura3"><circle cx="200" cy="128" r="1.5" fill="#c4a84a"/></g>
-    <text x="200" y="472" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="18" fill="#3d5a1e" opacity="0.7" fontStyle="italic">presença · clareza · verdade</text>
-  </g>
+<text x="200" y="472" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="22" fill="#3d5a1e" opacity="0.85" fontStyle="italic">presença · clareza · verdade</text>  </g>
 </svg>
           <div className="about-image-frame" />
         </div>
