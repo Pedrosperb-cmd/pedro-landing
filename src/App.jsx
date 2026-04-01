@@ -783,45 +783,107 @@ const testimonials = [
 
       <section className="about container">
         <div id="about-img" ref={setRef("about-img")} className={`about-image-wrap reveal${visible["about-img"] ? " shown" : ""}`}>
-          <svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" style={{width:"100%", maxWidth:"340px", display:"block", margin:"0 auto"}}>
-            <circle cx="200" cy="200" r="140" fill="none" stroke="#8aab5c" strokeWidth="1" opacity="0.3"/>
-            <circle cx="200" cy="200" r="110" fill="none" stroke="#c4a84a" strokeWidth="0.5" opacity="0.25"/>
-            <ellipse cx="200" cy="390" rx="110" ry="14" fill="#c8e09a" opacity="0.5"/>
-            <ellipse cx="200" cy="390" rx="85" ry="9" fill="#8aab5c" opacity="0.25"/>
-            <path d="M145 360 Q160 380 200 382 Q240 380 255 360" fill="none" stroke="#3d5a1e" strokeWidth="3" strokeLinecap="round"/>
-            <path d="M148 362 Q155 375 178 378" fill="none" stroke="#3d5a1e" strokeWidth="8" strokeLinecap="round"/>
-            <path d="M252 362 Q245 375 222 378" fill="none" stroke="#3d5a1e" strokeWidth="8" strokeLinecap="round"/>
-            <ellipse cx="175" cy="379" rx="14" ry="7" fill="#5a7a2a" opacity="0.7"/>
-            <ellipse cx="225" cy="379" rx="14" ry="7" fill="#5a7a2a" opacity="0.7"/>
-            <path d="M175 270 Q165 310 162 345 Q180 360 200 361 Q220 360 238 345 Q235 310 225 270 Z" fill="#3d5a1e"/>
-            <path d="M175 270 Q155 300 148 350 Q165 365 200 366 Q235 365 252 350 Q245 300 225 270 Z" fill="#5a7a2a" opacity="0.5"/>
-            <rect x="192" y="248" width="16" height="26" rx="8" fill="#a08c3c" opacity="0.8"/>
-            <ellipse cx="200" cy="228" rx="34" ry="38" fill="#c4a84a" opacity="0.85"/>
-            <ellipse cx="200" cy="200" rx="34" ry="18" fill="#3d5a1e" opacity="0.9"/>
-            <path d="M187 228 Q192 232 197 228" fill="none" stroke="#3d5a1e" strokeWidth="1.5" strokeLinecap="round"/>
-            <path d="M203 228 Q208 232 213 228" fill="none" stroke="#3d5a1e" strokeWidth="1.5" strokeLinecap="round"/>
-            <path d="M192 240 Q200 246 208 240" fill="none" stroke="#3d5a1e" strokeWidth="1.2" strokeLinecap="round"/>
-            <path d="M175 285 Q155 320 150 355" fill="none" stroke="#3d5a1e" strokeWidth="9" strokeLinecap="round"/>
-            <ellipse cx="150" cy="358" rx="10" ry="6" fill="#5a7a2a" opacity="0.8" transform="rotate(-15 150 358)"/>
-            <path d="M225 285 Q245 320 250 355" fill="none" stroke="#3d5a1e" strokeWidth="9" strokeLinecap="round"/>
-            <ellipse cx="250" cy="358" rx="10" ry="6" fill="#5a7a2a" opacity="0.8" transform="rotate(15 250 358)"/>
-            <circle cx="200" cy="152" r="4" fill="#c4a84a" opacity="0.7"/>
-            <circle cx="200" cy="138" r="2.5" fill="#c4a84a" opacity="0.5"/>
-            <circle cx="200" cy="128" r="1.5" fill="#c4a84a" opacity="0.3"/>
-            <circle cx="130" cy="210" r="3" fill="#8aab5c" opacity="0.4"/>
-            <circle cx="118" cy="195" r="2" fill="#8aab5c" opacity="0.3"/>
-            <circle cx="270" cy="210" r="3" fill="#8aab5c" opacity="0.4"/>
-            <circle cx="282" cy="195" r="2" fill="#8aab5c" opacity="0.3"/>
-            <path d="M100 390 Q90 370 80 355" fill="none" stroke="#8aab5c" strokeWidth="2" strokeLinecap="round"/>
-            <path d="M100 390 Q85 375 88 358" fill="none" stroke="#8aab5c" strokeWidth="1.5" strokeLinecap="round"/>
-            <ellipse cx="80" cy="353" rx="10" ry="6" fill="#5a7a2a" opacity="0.5" transform="rotate(-20 80 353)"/>
-            <ellipse cx="87" cy="356" rx="9" ry="5" fill="#8aab5c" opacity="0.4" transform="rotate(10 87 356)"/>
-            <path d="M300 390 Q310 370 320 355" fill="none" stroke="#8aab5c" strokeWidth="2" strokeLinecap="round"/>
-            <path d="M300 390 Q315 375 312 358" fill="none" stroke="#8aab5c" strokeWidth="1.5" strokeLinecap="round"/>
-            <ellipse cx="320" cy="353" rx="10" ry="6" fill="#5a7a2a" opacity="0.5" transform="rotate(20 320 353)"/>
-            <ellipse cx="313" cy="356" rx="9" ry="5" fill="#8aab5c" opacity="0.4" transform="rotate(-10 313 356)"/>
-            <text x="200" y="470" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="13" fill="#3d5a1e" opacity="0.5" fontStyle="italic">presença · clareza · verdade</text>
-          </svg>
+<svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" style={{width:"100%", maxWidth:"340px", display:"block", margin:"0 auto"}}>
+  <style>{`
+    @keyframes breathe {
+      0%, 100% { transform: translateY(0px) scaleX(1); }
+      50% { transform: translateY(-6px) scaleX(0.98); }
+    }
+    @keyframes float1 {
+      0%, 100% { transform: translate(0px, 0px); opacity: 0.4; }
+      33% { transform: translate(-6px, -8px); opacity: 0.7; }
+      66% { transform: translate(4px, -5px); opacity: 0.3; }
+    }
+    @keyframes float2 {
+      0%, 100% { transform: translate(0px, 0px); opacity: 0.3; }
+      33% { transform: translate(5px, -10px); opacity: 0.6; }
+      66% { transform: translate(-3px, -6px); opacity: 0.2; }
+    }
+    @keyframes float3 {
+      0%, 100% { transform: translate(0px, 0px); opacity: 0.4; }
+      50% { transform: translate(6px, -7px); opacity: 0.7; }
+    }
+    @keyframes float4 {
+      0%, 100% { transform: translate(0px, 0px); opacity: 0.3; }
+      50% { transform: translate(-5px, -9px); opacity: 0.6; }
+    }
+    @keyframes sway-left {
+      0%, 100% { transform-origin: 100px 390px; transform: rotate(0deg); }
+      30% { transform-origin: 100px 390px; transform: rotate(-8deg); }
+      60% { transform-origin: 100px 390px; transform: rotate(5deg); }
+    }
+    @keyframes sway-right {
+      0%, 100% { transform-origin: 300px 390px; transform: rotate(0deg); }
+      30% { transform-origin: 300px 390px; transform: rotate(8deg); }
+      60% { transform-origin: 300px 390px; transform: rotate(-5deg); }
+    }
+    @keyframes aura-pulse {
+      0%, 100% { opacity: 0.7; transform: translateY(0px); }
+      50% { opacity: 1; transform: translateY(-4px); }
+    }
+    @keyframes aura-pulse2 {
+      0%, 100% { opacity: 0.5; transform: translateY(0px); }
+      50% { opacity: 0.8; transform: translateY(-6px); }
+    }
+    @keyframes aura-pulse3 {
+      0%, 100% { opacity: 0.3; transform: translateY(0px); }
+      50% { opacity: 0.6; transform: translateY(-8px); }
+    }
+    .figure { animation: breathe 5s ease-in-out infinite; transform-origin: 200px 480px; }
+    .p1 { animation: float1 4s ease-in-out infinite; }
+    .p2 { animation: float2 5s ease-in-out infinite 0.5s; }
+    .p3 { animation: float3 4.5s ease-in-out infinite 1s; }
+    .p4 { animation: float4 3.8s ease-in-out infinite 0.3s; }
+    .plant-left { animation: sway-left 4s ease-in-out infinite; }
+    .plant-right { animation: sway-right 4s ease-in-out infinite 0.8s; }
+    .aura1 { animation: aura-pulse 3s ease-in-out infinite; }
+    .aura2 { animation: aura-pulse2 3s ease-in-out infinite 0.5s; }
+    .aura3 { animation: aura-pulse3 3s ease-in-out infinite 1s; }
+  `}</style>
+  <circle cx="200" cy="200" r="140" fill="none" stroke="#8aab5c" strokeWidth="1" opacity="0.3"/>
+  <circle cx="200" cy="200" r="110" fill="none" stroke="#c4a84a" strokeWidth="0.5" opacity="0.25"/>
+  <g className="plant-left">
+    <path d="M100 390 Q90 370 80 355" fill="none" stroke="#8aab5c" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M100 390 Q85 375 88 358" fill="none" stroke="#8aab5c" strokeWidth="1.5" strokeLinecap="round"/>
+    <ellipse cx="80" cy="353" rx="10" ry="6" fill="#5a7a2a" opacity="0.5" transform="rotate(-20 80 353)"/>
+    <ellipse cx="87" cy="356" rx="9" ry="5" fill="#8aab5c" opacity="0.4" transform="rotate(10 87 356)"/>
+  </g>
+  <g className="plant-right">
+    <path d="M300 390 Q310 370 320 355" fill="none" stroke="#8aab5c" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M300 390 Q315 375 312 358" fill="none" stroke="#8aab5c" strokeWidth="1.5" strokeLinecap="round"/>
+    <ellipse cx="320" cy="353" rx="10" ry="6" fill="#5a7a2a" opacity="0.5" transform="rotate(20 320 353)"/>
+    <ellipse cx="313" cy="356" rx="9" ry="5" fill="#8aab5c" opacity="0.4" transform="rotate(-10 313 356)"/>
+  </g>
+  <g className="p1"><circle cx="130" cy="210" r="3.5" fill="#8aab5c"/></g>
+  <g className="p2"><circle cx="118" cy="195" r="2.5" fill="#8aab5c"/></g>
+  <g className="p3"><circle cx="270" cy="210" r="3.5" fill="#8aab5c"/></g>
+  <g className="p4"><circle cx="282" cy="195" r="2.5" fill="#8aab5c"/></g>
+  <g className="figure">
+    <ellipse cx="200" cy="390" rx="110" ry="14" fill="#c8e09a" opacity="0.5"/>
+    <ellipse cx="200" cy="390" rx="85" ry="9" fill="#8aab5c" opacity="0.25"/>
+    <path d="M145 360 Q160 380 200 382 Q240 380 255 360" fill="none" stroke="#3d5a1e" strokeWidth="3" strokeLinecap="round"/>
+    <path d="M148 362 Q155 375 178 378" fill="none" stroke="#3d5a1e" strokeWidth="8" strokeLinecap="round"/>
+    <path d="M252 362 Q245 375 222 378" fill="none" stroke="#3d5a1e" strokeWidth="8" strokeLinecap="round"/>
+    <ellipse cx="175" cy="379" rx="14" ry="7" fill="#5a7a2a" opacity="0.7"/>
+    <ellipse cx="225" cy="379" rx="14" ry="7" fill="#5a7a2a" opacity="0.7"/>
+    <path d="M175 270 Q165 310 162 345 Q180 360 200 361 Q220 360 238 345 Q235 310 225 270 Z" fill="#3d5a1e"/>
+    <path d="M175 270 Q155 300 148 350 Q165 365 200 366 Q235 365 252 350 Q245 300 225 270 Z" fill="#5a7a2a" opacity="0.5"/>
+    <rect x="192" y="248" width="16" height="26" rx="8" fill="#a08c3c" opacity="0.8"/>
+    <ellipse cx="200" cy="228" rx="34" ry="38" fill="#c4a84a" opacity="0.85"/>
+    <ellipse cx="200" cy="200" rx="34" ry="18" fill="#3d5a1e" opacity="0.9"/>
+    <path d="M187 228 Q192 232 197 228" fill="none" stroke="#3d5a1e" strokeWidth="1.5" strokeLinecap="round"/>
+    <path d="M203 228 Q208 232 213 228" fill="none" stroke="#3d5a1e" strokeWidth="1.5" strokeLinecap="round"/>
+    <path d="M192 240 Q200 246 208 240" fill="none" stroke="#3d5a1e" strokeWidth="1.2" strokeLinecap="round"/>
+    <path d="M175 285 Q155 320 150 355" fill="none" stroke="#3d5a1e" strokeWidth="9" strokeLinecap="round"/>
+    <ellipse cx="150" cy="358" rx="10" ry="6" fill="#5a7a2a" opacity="0.8" transform="rotate(-15 150 358)"/>
+    <path d="M225 285 Q245 320 250 355" fill="none" stroke="#3d5a1e" strokeWidth="9" strokeLinecap="round"/>
+    <ellipse cx="250" cy="358" rx="10" ry="6" fill="#5a7a2a" opacity="0.8" transform="rotate(15 250 358)"/>
+    <g className="aura1"><circle cx="200" cy="152" r="4" fill="#c4a84a"/></g>
+    <g className="aura2"><circle cx="200" cy="138" r="2.5" fill="#c4a84a"/></g>
+    <g className="aura3"><circle cx="200" cy="128" r="1.5" fill="#c4a84a"/></g>
+    <text x="200" y="472" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="18" fill="#3d5a1e" opacity="0.7" fontStyle="italic">presença · clareza · verdade</text>
+  </g>
+</svg>
           <div className="about-image-frame" />
         </div>
         <div id="about-text" ref={setRef("about-text")} className={`reveal reveal-delay-1${visible["about-text"] ? " shown" : ""}`}>
